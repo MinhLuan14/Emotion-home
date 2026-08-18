@@ -1,0 +1,16 @@
+.ai-insight-card {}
+
+.insight-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+}
+
+.insight-quote {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ehc-text);
+    font-style: italic;
+    text-align: center;
+}

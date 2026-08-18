@@ -1,0 +1,56 @@
+.status-overview-card {
+    background: #ffffff;
+    border: 1px solid var(--ehc-neutral-200);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 0 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.status-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.status-icon {
+    font-size: 32px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.status-info {
+    flex: 1;
+}
+
+.status-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ehc-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.status-message {
+    font-size: 13px;
+    color: var(--ehc-text-secondary);
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .status-overview-card {
+        margin: 0 16px;
+        padding: 16px;
+    }
+
+    .status-grid {
+        gap: 16px;
+    }
+}

@@ -1,0 +1,24 @@
+.emotion-card {}
+
+.emotion-content {}
+
+.emotion-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-height: 100px;
+    justify-content: center;
+}
+
+.emotion-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ehc-text);
+}
+
+.emotion-percentage {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0284c7;
+}

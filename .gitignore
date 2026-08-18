@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Environment
+.env
+
+# Node
+node_modules/
+dist/
+
+# Java
+target/
+*.class
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# AI / temporary files
+temp/
+tmp/
+models/
+checkpoints/
+
+# Generated files
+uploads/
+outputs/

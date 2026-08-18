@@ -1,0 +1,456 @@
+/* ==========================================================
+   MODERN PROFILE DASHBOARD CSS (EHC System)
+========================================================== */
+
+.profile-loading,
+.profile-error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 2px dashed #0284c7;
+}
+
+.profile-error {
+    color: #dc2626;
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border-color: #dc2626;
+}
+
+.ehc-profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: inherit;
+}
+
+/* Banner Đầu trang */
+.profile-top-banner {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    border-radius: 16px;
+    padding: 24px 32px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 25px -5px rgba(2, 132, 199, 0.2);
+}
+
+.banner-text h1 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+}
+
+.banner-text p {
+    font-size: 14px;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.ehc-btn-logout-top {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.ehc-btn-logout-top:hover {
+    background: rgba(239, 68, 68, 0.9);
+    border-color: transparent;
+}
+
+/* Lưới bố cục trang */
+.profile-dashboard-grid {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 900px) {
+    .profile-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Khung Card chung */
+.profile-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03);
+}
+
+/* Cột trái: User Overview */
+.user-overview-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: fit-content;
+}
+
+.avatar-wrapper {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.user-avatar-circle {
+    width: 88px;
+    height: 88px;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+    color: #0284c7;
+    font-size: 32px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+}
+
+.online-badge-dot {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    background-color: #10b981;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+}
+
+.user-profile-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 4px 0;
+}
+
+.user-profile-email {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 16px 0;
+}
+
+.user-badges-container {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.badge-pill {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.role-badge {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.status-active-badge {
+    background: #f0fdf4;
+    color: #15803d;
+}
+
+.quick-stats-box {
+    width: 100%;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stat-label {
+    font-size: 11px;
+    color: #94a3b8;
+}
+
+.stat-val {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+/* Cột phải: Nội dung chi tiết */
+.profile-main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card-section-header {
+    margin-bottom: 20px;
+}
+
+.card-section-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0 0 2px 0;
+}
+
+.section-sub {
+    font-size: 12px;
+    color: #64748b;
+}
+
+/* Danh sách thông tin dạng lưới */
+.info-grid-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-grid-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid #f1f5f9;
+}
+
+.grid-label {
+    font-size: 13px;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.grid-value {
+    font-size: 13px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.grid-value.highlight {
+    color: #0284c7;
+    background: #e0f2fe;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+/* Cài đặt bảo mật */
+.security-action-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.security-action-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.sec-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.sec-icon-box {
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.security-action-row h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1e293b;
+    margin: 0 0 2px 0;
+}
+
+.security-action-row p {
+    font-size: 12px;
+    color: #64748b;
+    margin: 0;
+}
+
+.ehc-btn-secondary {
+    padding: 8px 14px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.ehc-btn-secondary:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.text-status-enabled {
+    font-size: 13px;
+    font-weight: 600;
+    color: #10b981;
+    background: #f0fdf4;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+/* Modal Overlay & Card */
+.ehc-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.ehc-modal-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    animation: modalScaleUp 0.2s ease-out;
+}
+
+@keyframes modalScaleUp {
+    from {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modal-header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.modal-header-box h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.close-x-btn {
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.modal-body-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.form-group-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group-item label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-group-item input {
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group-item input:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.1);
+}
+
+.modal-footer-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.ehc-btn-outline {
+    padding: 9px 16px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+}
+
+.ehc-btn-primary {
+    padding: 9px 16px;
+    background: #0284c7;
+    border: 1px solid #0284c7;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.ehc-btn-primary:hover {
+    background: #0369a1;
+}
